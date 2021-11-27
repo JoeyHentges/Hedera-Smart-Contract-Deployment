@@ -15,6 +15,7 @@ export interface CreateSmartContract {
 
 /**
  * A transaction that creates a new smart contract instance.
+ * Max contract size: 1024kB
  * https://docs.hedera.com/guides/docs/sdks/smart-contracts/create-a-smart-contract
  * Transaction Fee: $1.0
  * 

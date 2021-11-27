@@ -70,9 +70,11 @@ export interface CreateFile {
 }
 
 /**
- * A query that returns the account balance for the specified account.
- * https://docs.hedera.com/guides/docs/sdks/cryptocurrency/get-account-balance
- * Transaction Fee: $0.05
+ * A transaction that creates a new file on a Hedera network. NOTE: If the contents are over 5500 bytes, it will have to be
+ * chunked into separate transaction calls using the appendFile transaction. This function does it automatically.
+ * Max file size: 1024kB
+ * https://docs.hedera.com/guides/docs/sdks/file-storage/create-a-file
+ * Transaction Fee: ?
  * 
  * @param   {PrivateKey[]} adminKeys      The public key of the wallet allowed to make changes to the file
  * @param   {string}       fileContent    The content of the file -- when compiling contracts it's the "bytecode" of the json output
