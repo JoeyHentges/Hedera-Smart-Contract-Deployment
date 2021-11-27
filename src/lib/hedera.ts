@@ -7,7 +7,7 @@ config({ path: environment === 'development' ? './.env.development' : './.env.pr
 const accountId: string = process.env.ACCOUNT_ID || '';
 const privateKey: string = process.env.PRIVATE_KEY || '';
 
-let client;
+let client: Client;
 
 try {
   if (environment === 'development') {
