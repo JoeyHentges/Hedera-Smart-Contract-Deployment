@@ -48,8 +48,7 @@ const smartContractExecuteTransaction = async ({
     contractId,
     functionName,
     functionParameters,
-    transactionStatus: receipt.status,
-    response: txResponse
+    transactionStatus: receipt.status
   };
 }
 
