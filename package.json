@@ -19,7 +19,8 @@
     "url": "https://github.com/JoeyHentges/hedera-smart-contract-deployment"
   },
   "files": [
-    "contracts"
+    "contracts",
+    "src"
   ],
   "engines": {
     "node": ">=10"
