@@ -1,15 +1,35 @@
 {
-  "name": "hedera-deploy",
+  "name": "hedera-smart-contract-deployment",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Quickly and easily deploy your Hedera smart contracts.",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "hedera",
+    "hashgraph",
+    "hedera hashgraph",
+    "soliditiy",
+    "smart contract",
+    "contract"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoeyHentges/hedera-smart-contract-deploymen"
+  },
+  "files": [
+    "contracts"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "build": "rm -rf dist && tsc",
     "dev": "set \"NODE_ENV=development\" && npm run build && node dist/src/index.js",
     "prod": "set \"NODE_ENV=production\" && npm run build && node dist/src/index.js"
   },
   "author": "",
-  "license": "ISC",
   "dependencies": {
     "@hashgraph/sdk": "^2.5.0",
     "dotenv": "^10.0.0",
