@@ -4,11 +4,11 @@ import { client } from '../../lib/hedera';
 import { FunctionParameter, getContractFunctionParameters } from '../../helpers';
 
 export interface SmartContractCallQuery {
-  contractId: ContractId;
+  contractId: ContractId | string;
   functionName: string;
   functionParameters?: FunctionParameter[];
   queryPaymentAmount?: number,
-  gas: number;
+  gas?: number;
 }
 
 /**
@@ -17,11 +17,11 @@ export interface SmartContractCallQuery {
  * Transaction Fee: $0.05
  * Transaction Fee (local call): $0.001
  * 
- * @param   {ContractId}                   contractId         The id of the contract
- * @param   {string}                       functionName       The identifier/name of the function being called
- * @param   {[{type: string, value: any}]} functionParameters The parameters being passed to the function being called
- * @param   {number}                       queryPaymentAmount Set the query payment in hbars for the node returning the request
- * @param   {number}                       gas
+ * @param   {ContractId | string} contractId         The id of the contract
+ * @param   {string}              functionName       The identifier/name of the function being called
+ * @param   {FunctionParameter[]} functionParameters The parameters being passed to the function being called
+ * @param   {number}              queryPaymentAmount Set the query payment in hbars for the node returning the request
+ * @param   {number}              gas
  * @returns {*}
  */
 const smartContractCallQuery = async ({

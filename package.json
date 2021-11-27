@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && tsc",
+    "dev": "set \"NODE_ENV=development\" && npm run build && node dist/src/index.js"
   },
   "author": "",
   "license": "ISC",
